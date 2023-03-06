@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  overflow: hidden;
+}
+
+.container {
+  height: 500px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+.parallax-group {
+  position: relative;
+  height: 500px;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 15px 5px black;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.parallax-layer-back {
+  z-index: 3;
+  transform: translateZ(-300px) scale(2.02);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.parallax-layer-fore {
+  z-index: 1;
+  transform: translateZ(90px) scale(0.7);
+}
+
+.parallax-layer-base {
+  z-index: 4;
+  transform: translateZ(0);
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: rgb(18, 18, 92);
+  letter-spacing: 5px;
+}
+
+.box-winter {
+  z-index: 3;
+}
+.box-winter .parallax-layer-back {
+  background-image: url(Winter.jpg);
+}
+
+.box-spring {
+  z-index: 4;
+}
+.box-spring .parallax-layer-base {
+  background-image: url(Spring.jpg);
+}
+
+.box-summer {
+  z-index: 2;
+}
+.box-summer .parallax-layer-back {
+  background-image: url(Summer.jpg);
+}
+
+.box-autumn {
+  z-index: 3;
+}
+.box-autumn .parallax-layer-base {
+  background-image: url(Autumn.jpg);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
